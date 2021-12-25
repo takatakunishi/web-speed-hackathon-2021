@@ -1,7 +1,7 @@
 const postcssImport = require('postcss-import');
 const postcssPresetEnv = require('postcss-preset-env');
 const tailwindcss = require('tailwindcss');
-
+const cssnano = require(`cssnano`)
 module.exports = {
   plugins: [
     postcssImport(),
@@ -9,5 +9,6 @@ module.exports = {
     postcssPresetEnv({
       stage: 3,
     }),
+    cssnano()
   ],
 };
